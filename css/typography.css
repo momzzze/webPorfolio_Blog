@@ -11,16 +11,16 @@ html{
     font:14px/1.5 "Fira Sans", Georgia, serif;
 }
 
-@media(min-width:600px){
-    html {font-size: 16px;}
+@media(min-width: 600px){
+    html {font-size: var(--font-size-body-larger,16px);}
 }
 
-@media(min-width:1024px){
-    html {font-size: 18px;}
+@media(min-width: 1024px){
+    html {font-size: var(--font-size-body-big, 18px);}
 }
 
-@media(min-width:1600px){
-    html {font-size: 20px;}
+@media(min-width: 1600px){
+    html {font-size: var(--font-size-body-huge, 20px);}
 }
 
 body,table,form,select,option,input,textarea{
