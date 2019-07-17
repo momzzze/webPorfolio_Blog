@@ -23,8 +23,10 @@ html{
     html {font-size: var(--font-size-body-huge, 20px);}
 }
 
-body,table,form,select,option,input,textarea{
+body,table,form,select,option,input,textarea {
     font:inherit;
+    background: var(--color-body-bgrd,#fff);
+    color: var(--color-body-text #000);
 }
 
 
@@ -42,6 +44,12 @@ h3{font-size: 1.8em;}
 h4{font-size: 1.4em;}
 h5{font-size: 1.2em;}
 h6{font-size: 1em;}
+
+a{
+    text-decoration: none;
+    color: var(--color-link-default,#0A0);
+}
+
 
 p, ul, ol{
     padding-bottom: 1.5em;

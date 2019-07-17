@@ -4,5 +4,13 @@
      --font-size-body-big: 18px;
      --font-size-body-huge: 20px;
 
-     
+     --layout-main-width: 60em;
+
+     --color-body-bgrd:#fff;
+     --color-body-text:#000;
+     --color-link-default: #900;
+
+     --color-border-default: #999;
+
+     --spacing-layout-elements: 2em;
 }

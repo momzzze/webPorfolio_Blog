@@ -13,18 +13,21 @@
     <div class="site">
 
         <header class="site-header">
-            <h1 class="site-tittle"><a href="/">{{site.title}}</a></h1>
-
-            <nav>
+            {% if page.home == true %}
+            <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
+            {% else %}
+            <p class="site-title"><a href="/">{{site.title}}</a></p>
+            {% endif %}
+            <nav class="site-nav">
                 <ul>
                     {% for page in site.pages %}
                     {% if page.title%}
-                      <li>
+                    <li>
                         <a href="{{ page.url }}">{{ page.title }}</a>
-                      </li>
-                      {% endif %}
+                    </li>
+                    {% endif %}
                     {% endfor %}
-                  </ul>
+                </ul>
             </nav>
 
         </header>
