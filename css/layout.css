@@ -6,7 +6,8 @@
 
 @media (min-width: 1024px) {
   .site-header {
-    display: flex;
+    display: flex;    
+    align-items: center;
   }
 
   .site-header nav {

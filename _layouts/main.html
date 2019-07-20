@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/css/site.css">
     <title>{{site.title}}</title>
 </head>
 
@@ -14,16 +14,16 @@
 
         <header class="site-header">
             {% if page.home == true %}
-            <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
+            <h1 class="site-title"><a href="{{site.baseurl}}/">{{site.title}}</a></h1>
             {% else %}
-            <p class="site-title"><a href="/">{{site.title}}</a></p>
+            <p class="site-title"><a href="{{site.baseurl}}/">{{site.title}}</a></p>
             {% endif %}
             <nav class="site-nav">
                 <ul>
                     {% for page in site.pages %}
                     {% if page.title%}
                     <li>
-                        <a href="{{ page.url }}">{{ page.title }}</a>
+                        <a href="{{site.baseurl}}/{{ page.url }}">{{ page.title }}</a>
                     </li>
                     {% endif %}
                     {% endfor %}
