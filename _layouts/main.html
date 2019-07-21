@@ -18,18 +18,8 @@
             {% else %}
             <p class="site-title"><a href="{{site.baseurl}}/">{{site.title}}</a></p>
             {% endif %}
-            <nav class="site-nav">
-                <ul>
-                    {% for page in site.pages %}
-                    {% if page.title%}
-                    <li>
-                        <a href="{{site.baseurl}}/{{ page.url }}">{{ page.title }}</a>
-                    </li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-            </nav>
-
+            
+            {% include navigation.html %}
         </header>
 
         <main class="site-main">
@@ -46,6 +36,7 @@
 
         <footer class="site-footer">
             <p>All rights reserved &copy; </p>
+            
         </footer>
 
     </div>
