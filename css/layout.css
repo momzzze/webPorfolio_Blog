@@ -4,18 +4,6 @@
   padding: 2em;
 }
 
-.site-main{
-    opacity: 0;    
-    transform: translateX(-2em);  
-    transition: opacity 0.4s ease-in, transform 0.4s ease-in-out ;
-    transition-delay: 1s;
-}
-
-body.loaded .site-main{
-    opacity: 1;
-    transform: translateX(0); 
-
-}
 
 @media (min-width: 1024px) {
   .site-header {

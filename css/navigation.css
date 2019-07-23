@@ -25,7 +25,6 @@
   padding: 0.5em 1em;
   border-radius: 0.31em;
   background: #EEE;
-  transition: background 0.42s ease-in-out, color 0.42s ease-in-out;
 }
 
 .site-nav a:hover {
@@ -36,7 +35,6 @@
 .site-nav a i.fas:before{
     color: #000;
     margin-right: 0.5em;
-    transition: color 0.42s ease-in-out;
 }
 
 .site-nav a:hover i.fas:before{
