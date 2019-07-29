@@ -7,11 +7,11 @@ let gulp = require("gulp"),
 	sass = require('gulp-sass'),
 	cp = require("child_process");
 
-gulp.task("scss", function() {
-	return gulp.src( '_assets/scss/**/*.scss' )
-		.pipe( sass().on('error', sass.logError) )
+gulp.task("css", function() {
+	return gulp.src( '_assets/css/**/*.css' )
+		// .pipe( sass().on('error', sass.logError) )
 		.pipe( autoprefixer() )
-		.pipe( gulp.dest( './docs/css/' ) )
+		.pipe( gulp.dest( './_site/docs/css/' ) )
 		.pipe( browserSync.stream({ match: '**/*.css' }) )
 	;
 });
@@ -25,11 +25,11 @@ gulp.task("watch", function() {
 
 	browserSync.init({
 		server: {
-            baseDir: "./docs/"
+            baseDir: "./_site"
 		}
 	});
 
-	gulp.watch( '_assets/scss/**/*.scss', gulp.series('scss') );
+	gulp.watch( './_site/docs/css/*.css', gulp.series('css') );
 
 	gulp.watch(
 		[
@@ -38,11 +38,11 @@ gulp.task("watch", function() {
 			"./_layouts/*.html",
 			"./_posts/**/*.*"
 		]
-	).on('change', gulp.series('jekyll', 'scss') );
+	).on('change', gulp.series('jekyll', 'css') );
 
 	gulp.watch( 'docs/**/*.html' ).on('change', browserSync.reload );
 	gulp.watch( 'docs/**/*.js' ).on('change', browserSync.reload );
 
 });
 
-gulp.task("default", gulp.series('jekyll', 'scss', 'watch'));
+gulp.task("default", gulp.series('jekyll', 'css', 'watch'));

@@ -16,7 +16,8 @@
 title: Portfolio
 email: momzzze@abv.bg
 description: This is very base Portfolio page on github user momzzze.
-baseurl: "/webPorfolio_Blog"
+baseurl: ""
+# baseurl: "/webPorfolio_Blog"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  momzzze
@@ -38,5 +39,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - _assets
+  - gulpfile.js
+  - package.json
+  - package-lock.json
 include:
     - _static
